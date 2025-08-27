@@ -1,0 +1,62 @@
+
+
+            context -----> <<interface>>Strategy
+                              / \
+                             /   \
+             concreteStrategy-1   concreteStrategy-2
+
+The Strategy design pattern is a behavioral design pattern that defines a family of algorithms,
+encapsulates each one, and makes them interchangeable. This pattern allows the algorithm to vary
+independently from clients that use it.
+
+Duck:
+flyBehavior()-> (flyBehavior with wings (slow/high speed)/can't flyBehavior)
+quackBehavior() -> (speak linke: queck, squeck, slience)
+
+<<interface>>
+Duck {
+    flyBehavior;
+    quackBehavior;
+
+    performFly();
+    performQuack();
+}
+
+flyBehavior{
+    fly();
+}
+
+quackBehavior {
+    quack();
+}
+
+class
+-----------------
+flyWithWings {
+    fly{}
+}
+flyNoWay {
+    fly(){}
+}
+
+--------------------
+Squeak {
+    quack(){}
+}
+muteQuack {
+    quack(){}
+}
+---------------------
+
+Mallard {
+   // flyBehavior with slow speed and Squeck
+}
+ModelDuck {
+   // No fly and multeQuack
+}
+DuckType3 {
+   // No flyBehavior with slow speed and Squeck
+}
+DuckType3 {
+   // no flyBehavior and Slience
+}
