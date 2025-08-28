@@ -49,7 +49,7 @@ muteQuack {
 ---------------------
 
 Mallard {
-   // flyBehavior with slow speed and Squeck
+   // flyBehavior with slow speed and Squeak
 }
 ModelDuck {
    // No fly and multeQuack
